@@ -148,6 +148,9 @@ nav a:hover {
     .visual-book-section {
         display: none;
     }
+    body {
+        background-image: linear-gradient(#FFF2D5, #F8CECC);
+    }
 }
 /* --- Results Section Styles --- */
 .results-section {
