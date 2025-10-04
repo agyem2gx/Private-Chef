@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Culinary Canvas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="/images/Chef.jpg" alt="Private Chef Logo" class="chef-logo">
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Discover Meals</a>
+            <a href="#">Create/Edit Meals</a>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <section class="input-section">
+            <h1>What's in your pantry?</h1>
+            <p class="subtitle">Enter your ingredients below, separated by commas, and let us cook up a meal for you!</p>
+            <div class="input-area">
+                <textarea id="ingredients-input" placeholder="e.g., chicken breast, broccoli, rice, garlic..."></textarea>
+                <div id="ingredient-tags"></div>
+                <button id="generate-button" type="button">Generate Meal Ideas</button>
+            </div>
+        </section>
+
+        <section class="visual-book-section">
+            <div class="book-image-container">
+                <img src="/images/ingredients.png" alt="Open Recipe Book" class="recipe-book">
+                <div class="book-overlay">
+                    <ul id="visual-ingredients-list"></ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <section class="results-section">
+        <h2>Your Custom Menu</h2>
+        <p class="subtitle">Based on your ingredients, here are some delicious meals we've crafted for you.</p>
+    </section>
+</body>
+</html>

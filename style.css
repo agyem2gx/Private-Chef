@@ -1,0 +1,167 @@
+/* --- Global Styles --- */
+:root {
+    --primary-red: #E74C3C; /* A vibrant red from the logo */
+    --accent-cream: #FDF4E3; /* Light, warm background color */
+    --text-dark: #2C3E50;
+    --text-light: #ECF0F1;
+    --book-paper: #FFF8E1; /* A creamy paper color for the book area */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--accent-cream);
+    color: var(--text-dark);
+    min-height: 100vh;
+}
+
+/* --- Header & Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #FFF8E6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.chef-logo {
+    display: flex;
+    justify-content: flex-start;
+    height: 60px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-dark);
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-red);
+}
+
+/* --- Main Content Layout --- */
+.content-container {
+    background-image: linear-gradient(#FFF2D5, #F8CECC);
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+/* --- Input Section (Left) --- */
+.input-section {
+    flex: 1; /* Takes up 50% of the space */
+    padding-right: 20px;
+}
+
+.input-section h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+.input-area textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 2px solid #BDC3C7;
+    border-radius: 8px;
+    font-size: 1.1em;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+.input-area textarea:focus {
+    outline: none;
+    border-color: var(--primary-red);
+}
+
+#generate-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#generate-button:hover {
+    background-color: #C0392B;
+}
+
+/* --- Visual Book Section (Right) --- */
+.visual-book-section {
+    flex: 1; /* Takes up 50% of the space */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-image-container {
+    position: relative;
+    width: 100%;
+    /* Maintain aspect ratio of the book image */
+    padding-bottom: 80%; 
+}
+
+.recipe-book {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Responsiveness (Mobile View) --- */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stacks the columns vertically */
+        margin-top: 20px;
+    }
+
+    .input-section {
+        padding-right: 0;
+    }
+
+    /* Move the book image to the top for a better mobile experience */
+    .visual-book-section {
+        display: none;
+    }
+}
+/* --- Results Section Styles --- */
+.results-section {
+    background-color: white;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.results-section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--primary-red);
+    display: inline-block;
+    padding-bottom: 5px;
+}
