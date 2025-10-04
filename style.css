@@ -1,7 +1,7 @@
 /* --- Global Styles --- */
 :root {
     --primary-red: #E74C3C; /* A vibrant red from the logo */
-    --accent-cream: #FDF4E3; /* Light, warm background color */
+    --accent-cream: #FFF8E6; /* Light, warm background color */
     --text-dark: #2C3E50;
     --text-light: #ECF0F1;
     --book-paper: #FFF8E1; /* A creamy paper color for the book area */
@@ -30,23 +30,28 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+.nav-left-group {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Adds space between the logo and the first nav link */
+}
+
 .chef-logo {
     display: flex;
-    justify-content: flex-start;
     height: 60px;
 }
 
-nav a {
+nav a, .help-link {
     text-decoration: none;
     color: var(--text-dark);
     margin-left: 20px;
     font-weight: 600;
-    transition: color 0.3s;
 }
 
-nav a:hover {
+nav a:hover, .help-link:hover {
     color: var(--primary-red);
 }
+
 
 /* --- Main Content Layout --- */
 .content-container {
@@ -144,8 +149,11 @@ nav a:hover {
         padding-right: 0;
     }
 
-    /* Move the book image to the top for a better mobile experience */
+    /* Move the book image dispear for mobile */
     .visual-book-section {
+        display: none;
+    }
+    #out{
         display: none;
     }
     body {
